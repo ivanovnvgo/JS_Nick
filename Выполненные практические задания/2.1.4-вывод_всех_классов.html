@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="one two three"></div>
+
+    <!-- 
+    Задание.
+    1. Сохраните в переменную тег div.
+    2. Создайте переменную classes, и в нее сохраните значение свойства classList.
+    3. C помощью forEach переберите classes и выведите каждый класс в консоль.
+     -->
+
+    <script>
+        "use strict";
+
+        // Этот вариант является решением или нет? (Если не считать, что не применил переменную classes)
+        // или полученную строку нельзя дальше использовать напрямую, кроме как посмотреть список классов?
+        let divs = document.getElementsByTagName('div');
+        for (let i = 0; i < divs.length; i++) {
+            console.log(divs[i].classList.value);
+        };
+
+        // Решение   
+        let search_divs = document.querySelector('div');
+        let classes = search_divs.classList;
+
+        classes.forEach(function(class_i) {
+            console.log(class_i);
+        });
+
+    </script>
+</body>
+
+</html>
